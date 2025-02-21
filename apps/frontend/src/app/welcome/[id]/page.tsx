@@ -7,8 +7,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
   //   fetchInvoiceById(id),
   // ]);
   return (
-    <main>
-      <h1>Hi there Customer {id}</h1>
+    <main className="@container">
       <div className="min-h-screen bg-gray-100 py-8">
         <DeliveryNotification />
       </div>
