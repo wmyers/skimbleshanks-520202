@@ -8,7 +8,7 @@ export default function NotFound(exception: Exception) {
   return (
     <main className="mx-auto max-w-4xl p-4">
       <div className="rounded-lg bg-white shadow-lg">
-        <div className="flex flex-col text-center md:flex-row md:text-left">
+        <div className="flex flex-col text-center">
           <div className="relative z-10 mx-auto mb-4 mt-12 h-40 w-40">
             <Image
               src="/sad-cat.jpg"
