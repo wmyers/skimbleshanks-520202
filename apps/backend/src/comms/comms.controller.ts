@@ -8,7 +8,7 @@ import {
 } from '@nestjs/common';
 
 import { CommsService } from './comms.service';
-import { HttpExceptionFilter } from 'src/shared/filters/http-exception.filter';
+import { HttpExceptionFilter } from '../shared/filters/http-exception.filter';
 import { UUID } from 'crypto';
 
 @Controller('comms')

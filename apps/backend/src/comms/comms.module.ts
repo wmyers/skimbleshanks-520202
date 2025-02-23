@@ -3,7 +3,7 @@ import { CommsController } from './comms.controller';
 import { CommsService } from './comms.service';
 import { PouchModule } from '../pouch/pouch.module';
 import { UserModule } from '../user/user.module';
-import { loggerMiddleware } from 'src/shared/middleware/logger.middleware';
+import { loggerMiddleware } from '../shared/middleware/logger.middleware';
 
 @Module({
   controllers: [CommsController],

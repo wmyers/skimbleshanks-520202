@@ -1,11 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { User } from 'src/shared/schemas/user.schema';
-import { Cat } from 'src/shared/schemas/cat.schema';
-import { DeliveryMessage } from 'src/shared/schemas/comms.schema';
-import { UserService } from 'src/user/user.service';
-import { PouchService } from 'src/pouch/pouch.service';
+import { Cat } from '../shared/schemas/cat.schema';
+import { DeliveryMessage } from '../shared/schemas/comms.schema';
+import { UserService } from '../user/user.service';
+import { PouchService } from '../pouch/pouch.service';
 import { UUID } from 'crypto';
-import { UserNotFoundException } from 'src/shared/exceptions/user.notfound.exception';
+import { UserNotFoundException } from '../shared/exceptions/user.notfound.exception';
 
 @Injectable()
 export class CommsService {
@@ -40,7 +39,7 @@ export class CommsService {
     const title = `Your next delivery for ${formattedActiveCatNames}`;
     const message = `Hey ${user.firstName}! In two days' time, we'll be charging you for your next order for ${formattedActiveCatNames}'s fresh food.`;
     const totalPrice = this.pouchService.aggregateCatsPouchPrice(activeCats);
-    const freeGift = totalPrice > 120;
+    const freeGift = totalPrice > 120; // normally this threshold would be configured and retrieved separately
     return {
       title, message, totalPrice, freeGift
     }
