@@ -11,4 +11,4 @@ The backend runs on port `3000`. The frontend on port `3001`.
 - Backend: http://localhost:3000/
 - Frontend: http://localhost:3001/ (has redirect)
 
-I haven't used `wait-on` or implemented a monorepo or some other technique to launch the apps, so just start the backend and then the frontend.
+I haven't used `wait-on` or implemented a monorepo or some other technique to launch the apps, so please start the backend and then the frontend in separate terminals.
