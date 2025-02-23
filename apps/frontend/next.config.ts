@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/',
-        destination: '/welcome',
+        destination: '/welcome/ff535484-6880-4653-b06e-89983ecf4ed5',
         permanent: true,
       },
     ];
