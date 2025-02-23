@@ -19,13 +19,13 @@ export class UserService {
   }
 
   async findOne(id: string): Promise<User | undefined> {
-    const users = (await this.cacheManager.get('users')) as User[];
+    const users: User[] = (await this.cacheManager.get<User[]>('users')) ?? [];
     const user = users.find(({ id: userId }) => id === userId);
     return user;
   }
 
   async findAll(): Promise<User[]> {
-    const users = (await this.cacheManager.get('users')) as User[];
+    const users: User[] = (await this.cacheManager.get<User[]>('users')) ?? [];
     return users;
   }
 }
