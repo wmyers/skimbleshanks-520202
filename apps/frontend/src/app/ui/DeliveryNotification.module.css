@@ -1,3 +1,4 @@
+/* This use of CSS modules is an attempt to manage longer tailwind styles - needs further investigation */
 .badge {
   @apply absolute -bottom-5 right-[50%] translate-x-1/2 md:translate-x-0 md:bottom-auto md:-top-3 md:-right-12 -rotate-[5deg] md:rotate-6 bg-pink-200 border-pink-300 border text-pink-700 px-3 py-[2px] text-sm font-bold
 }

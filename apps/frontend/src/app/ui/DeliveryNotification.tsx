@@ -42,9 +42,9 @@ const DeliveryNotification = ({ data }: { data: DeliveryMessageResponse }) => {
             <p className="mb-4 text-xs font-light text-gray-600">
               {data.message}
             </p>
-            <p className="mb-6 text-sm font-bold text-gray-800">
+            <strong className="mb-6 block text-sm font-bold text-gray-800">
               {`Total price: ${formatCurrency(data.totalPrice || 0)}`}
-            </p>
+            </strong>
 
             {/* Buttons */}
             <div className="flex flex-row gap-4">
@@ -53,7 +53,14 @@ const DeliveryNotification = ({ data }: { data: DeliveryMessageResponse }) => {
             </div>
 
             {/* Free Gift Badge */}
-            {data.freeGift && <div className={styles.badge}>FREE GIFT</div>}
+            {data.freeGift && (
+              <div
+                className={styles.badge}
+                aria-label="You have a free gift with this order"
+              >
+                FREE GIFT
+              </div>
+            )}
           </div>
         </div>
       </div>
