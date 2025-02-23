@@ -22,8 +22,8 @@ export class PouchService {
 
   aggregateCatsPouchPrice(cats: Cat[] = []): number {
     const price = cats.reduce((total, cat) => {
-      return total + this.getPouchPriceGBP(cat.pouchSize)
+      return total + this.getPouchPriceGBP(cat.pouchSize);
     }, 0);
-    return (Math.round(price * 100) / 100);
+    return Math.round(price * 100) / 100;
   }
 }
