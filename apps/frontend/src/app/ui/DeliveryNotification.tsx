@@ -1,8 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './DeliveryNotification.module.css';
+import { DeliveryMessageResponse } from '../lib/schemas/comms.schema';
+import { formatCurrency } from '../lib/utils/formatCurrency';
 
-const DeliveryNotification = () => {
+const DeliveryNotification = ({ data }: { data: DeliveryMessageResponse }) => {
+  if (!data.title || !data.message) {
+    return null;
+  }
   return (
     <div className="mx-auto max-w-4xl p-4">
       <div className="rounded-lg bg-white shadow-lg">
@@ -32,14 +37,13 @@ const DeliveryNotification = () => {
 
             {/* Text Content */}
             <h2 className="mb-2 text-base font-bold text-green-700">
-              Your next delivery for Dorian and Ocie
+              {data.title}
             </h2>
             <p className="mb-4 text-xs font-light text-gray-600">
-              Hey Kayleigh! In two days&apos; time, we&apos;ll be charging you
-              for your next order for Dorian and Ocie&apos;s fresh food.
+              {data.message}
             </p>
             <p className="mb-6 text-sm font-bold text-gray-800">
-              Total price: £134.00
+              {`Total price: ${formatCurrency(data.totalPrice || 0)}`}
             </p>
 
             {/* Buttons */}
@@ -49,7 +53,7 @@ const DeliveryNotification = () => {
             </div>
 
             {/* Free Gift Badge */}
-            <div className={styles.badge}>FREE GIFT</div>
+            {data.freeGift && <div className={styles.badge}>FREE GIFT</div>}
           </div>
         </div>
       </div>
