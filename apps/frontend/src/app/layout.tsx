@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
-export const inter = Inter({ subsets: ['latin'] });
+// NB https://github.com/vercel/next.js/discussions/58693#discussioncomment-8024154
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'KK Tech Test',
