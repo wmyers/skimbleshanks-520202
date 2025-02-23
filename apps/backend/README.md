@@ -1,4 +1,10 @@
-# KatKin's Full-stack Coding Test
+## Coding test notes
+
+I found this coding test a good way to show my thinking on the organisation of entities, types and where to put business logic. I like how Nest promotes SOLID principles in the framework and gives an opportunity for a developer to clearly show these considerations.
+
+The tests (mostly `jest` with one `supertest` for the validation pipe) are mainly conducted from the one `comms` module which consumes the other services. Some of the tests (like the  test for the cached user data) could also have been copied to the `user` module but it seemed reasonable to test everything from the one `comms` controller endpoint.
+
+<!-- # KatKin's Full-stack Coding Test
 
 ## BEFORE YOU BEGIN
 
@@ -134,4 +140,4 @@ Either:
 1. Make your solution publicly available in a Git repository(s) and send us the URL(s). You can have a separate frontend/backend repository if you want. Please make sure to name the repository something inconspicuous, i.e, don't put `KatKin` in the name. Do not fork this repository as your solution will be visible to all other candidates.
 2. Or, if option 1 is unfeasible, zip up all your code (please do not include `node_modules`!) and send it via email to tech@katkin.com
 
-We would also appreciate it if you can write a sentence or two about what you think of this test and/or and how we could improve it.
+We would also appreciate it if you can write a sentence or two about what you think of this test and/or and how we could improve it. -->
