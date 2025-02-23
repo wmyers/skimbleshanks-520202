@@ -40,7 +40,7 @@ export class CommsService {
     const title = `Your next delivery for ${formattedActiveCatNames}`;
     const message = `Hey ${user.firstName}! In two days' time, we'll be charging you for your next order for ${formattedActiveCatNames}'s fresh food.`;
     const totalPrice = this.pouchService.aggregateCatsPouchPrice(activeCats);
-    const freeGift = parseFloat(totalPrice) > 120;
+    const freeGift = totalPrice > 120;
     return {
       title, message, totalPrice, freeGift
     }

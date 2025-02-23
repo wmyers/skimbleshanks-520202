@@ -4,7 +4,7 @@ export const DeliveryMessageSchema = z
   .object({
     title: z.string(),
     message: z.string(),
-    totalPrice: z.string().regex(/d+.dd/), // defining as a string to have floating point 00's
+    totalPrice: z.number().min(0),
     freeGift: z.boolean(),
   })
   .strict();
