@@ -8,6 +8,8 @@ The buttons are dummies and there is no client-side interaction, so there is (as
 
 The `DeliveryNotification` UI component has some accessibility features with semantic HTML, a `<strong>` tag for the price and an `aria-label` for the free gift badge.
 
+With more time the `DeliveryNotification` UI component should be composed of atomic UI components, ideally using a component library (e.g. [Tailwind UI](https://tailwindui.com/)). Also could implement Storybook to review and test UI components in isolation.
+
 There are some simple unit tests for the currency formatter util and some React Testing Library js-dom tests for the `<DeliveryNotification>` UI. With more time I would have added Playwright or Cypress E2E tests.
 
 
