@@ -10,7 +10,7 @@ The `DeliveryNotification` UI component has some accessibility features with sem
 
 With more time the `DeliveryNotification` UI component should be composed of atomic UI components, ideally using a component library (e.g. [Tailwind UI](https://tailwindui.com/)). Also could implement [Storybook](https://storybook.js.org/) to review and test UI components in isolation.
 
-There are some simple unit tests for the currency formatter util and some React Testing Library js-dom tests for the `<DeliveryNotification>` UI. With more time I would have added Playwright or Cypress E2E tests.
+There are some simple unit tests for the currency formatter util and some React Testing Library js-dom tests for the `<DeliveryNotification>` UI. With more time I would have added Playwright or Cypress E2E tests. Also there should be a `page` test around the display of the `not-found` component.
 
 
 ## Getting Started

@@ -10,7 +10,6 @@ export default async function Page(props: { params: Promise<{ id: UUID }> }) {
   if (data.exception) {
     notFound();
   }
-  console.log(data);
   return (
     <main className="@container">
       <div className="min-h-screen bg-gray-100 py-8">
